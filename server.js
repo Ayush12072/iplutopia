@@ -6,9 +6,7 @@ app.get('/', (req, res) => {
     method: 'GET',
     headers: {
       'accept-ranges' :'bytes',
-      'access-control-allow-origin ':'*',
       'content-encoding ':'gzip',
-      'content-length ':'5959',
       'content-type ':'application/json',
       'server ':'nginx',
       'status ':'200',
