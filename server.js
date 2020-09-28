@@ -5,11 +5,11 @@ app.get('/', (req, res) => {
   fetch('https://www.cricbuzz.com/api/cricket-match/commentary/30370')
   .then(response => response.json())
   .then(data => {
-    // console.log('Success:', data);
+    console.log('Success:', data);
     return res.send(data);
   })
   .catch((error) => {
-    // console.error('Error:', error);
+    console.error('Error:', error);
     return res.send(`400 error`);
   });
 
