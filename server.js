@@ -2,17 +2,7 @@ var express = require('express');
 var app = express();    
 const fetch = require('node-fetch');              
 app.get('/', (req, res) => {
-  fetch('https://www.cricbuzz.com/api/cricket-match/commentary/30370',{
-    method: 'GET',
-    headers: {
-      'accept-ranges' :'bytes',
-      'content-encoding ':'gzip',
-      'content-type ':'application/json',
-      'server ':'nginx',
-      'status ':'200',
-      'vary ':'Accept-Encoding'
-    },
-  })
+  fetch('https://www.cricbuzz.com/api/cricket-match/commentary/30370')
   .then(response => response)
   .then(data => {
     console.log('Success:', data);
