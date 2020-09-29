@@ -1,6 +1,7 @@
 var express = require('express');       
 var app = express();    
-const fetch = require('node-fetch');      
+const fetch = require('node-fetch');   
+var $ = require( "jquery" );   
 
 function getData(){
   $.ajax({
