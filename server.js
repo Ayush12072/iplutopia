@@ -1,6 +1,27 @@
 var express = require('express');       
 var app = express();    
-const fetch = require('node-fetch');              
+const fetch = require('node-fetch');      
+
+function getData(){
+  $.ajax({
+      url : 'https://www.cricbuzz.com/api/cricket-match/commentary/30370',
+      type : 'GET',
+      success : function(data) { 
+          console.log(data);
+          // plotData(data);
+          // if(typeof(data.matchHeader)!=undefined){
+          //     var Txt = data.matchHeader.team1.name + " VS " + data.matchHeader.team2.name + ", "+data.matchHeader.matchDescription;
+          //     $('.todays-match').text(Txt);
+          // }
+      },
+      error : function(request)
+      {
+          console.log(request);
+      }
+  });
+}
+getData();
+
 app.get('/', (req, res) => {
   fetch('https://www.cricbuzz.com/api/cricket-match/commentary/30370')
   .then(response => response.json())
