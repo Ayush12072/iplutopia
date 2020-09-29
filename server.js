@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();    
 const fetch = require('node-fetch');      
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.get('/', (req, res) => {
   fetch('https://sdata.ndtv.com/sportz/cricket/xml/ddsh09292020197698.json?t=291601390796031')
