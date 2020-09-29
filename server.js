@@ -3,7 +3,7 @@ var app = express();
 const fetch = require('node-fetch');              
 app.get('/', (req, res) => {
   fetch('https://www.cricbuzz.com/api/cricket-match/commentary/30370')
-  .then(response => response)
+  .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
     return res.send(data);
