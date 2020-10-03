@@ -8,7 +8,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  fetch('https://sdata.ndtv.com/sportz/cricket/xml/bcrr10032020197702.json?t=31601732463982')
+  fetch('https://sdata.ndtv.com/sportz/cricket/xml/ddkr10032020197703.json?t=31601732541757')
   .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
